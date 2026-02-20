@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+import "./src/command.js";
 import * as operation from "./operations/index.js";
 console.log('Hello, World!');
 const note=process.argv[2];
