@@ -1,14 +1,13 @@
 const wait =(time , cb)=>{
-    setTimeout(()=>{
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
         cb()
+        resolve()
     },time)
+    })
 }
 
 
-wait(1000,()=>{
-    wait(1000,()=>{
-        wait(1000,()=>{
-            console.log('done')
-        })       
-    })
+wait(1000,()=>console.log('1s')).then(()=>{
+    console.log('1s')
 })
